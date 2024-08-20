@@ -1,0 +1,105 @@
+@use 'var';
+
+.hero{
+    background-image: url('../images/Firefly\ bolo\ de\ aniversário\ com\ uma\ paleta\ de\ cor\ verde\ claro\ 53982.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: block;
+    text-align: center;
+    padding-top: 64px;
+    padding-bottom: 5vw;
+    position: relative;
+    box-shadow: 2px #000;
+
+    &::before{
+        position: absolute;
+        top:0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: #000;
+        content: '';
+        opacity: .4;
+    }
+    &__container{
+        position: relative;
+
+    }
+    &__text{
+        display: block;
+        justify-content: center;
+        font-family: var.$mainFont;
+        font-size: var.$GG;
+        font-weight: bold;
+        padding-top: 244px;
+        color: var.$textCol;
+        opacity: 0.9;
+        &-days{
+            font-family: var.$thirdFont;
+        }
+        @media (max-width: 640px){
+            padding-top: 24px;
+            font-size: var.$M;
+        }
+    }
+
+    &__info{
+        background-color: #ffffff7c;
+        display: flex;
+        margin: 90px 405px;
+        justify-content: space-between;
+        list-style: none;
+        padding: 40px;
+        border-radius: 20px;
+
+        &__text{
+           font-family: var.$secFont;
+           font-size: var.$M; 
+           @media(max-width:1024px){
+               font-size: var.$P;
+               padding: 0 20px;
+            }
+            @media(max-width: 649px){
+             font-size: var.$PP;
+             padding: 0px;
+         }
+           &__button{
+            text-decoration: none;
+            color: var.$textCol;
+            background-color: var.$mainCol;
+            padding: 8px;
+            border-radius: 3px;
+            &:hover{
+                background-color: var.$mainColHov;
+            }
+            @media(max-width:640px){
+                text-wrap: nowrap;
+                padding: 5px;
+            }
+           }
+        }
+        @media (max-width: 1024px){
+            margin: 30px 5px;
+            padding: 30px 5px;
+            text-wrap: nowrap;
+            
+        }
+        @media(max-width:640px){
+            margin: 30px 5px;
+            padding: 18px 5px;
+            border-radius: 4px;
+        }
+    }
+
+    @media (max-width: 1024px){
+        background-size:cover ;
+        background-position: right;
+        padding-bottom: 5vw;
+    }
+    @media (max-width: 640px){
+        background-size: cover;
+        background-position: right;
+        padding-bottom: 10vw;
+        text-wrap: balance;
+    }
+}

@@ -1,0 +1,77 @@
+@use 'var';
+
+.presents{
+    &__background{
+        background-image: linear-gradient(var.$secCol, var.$thirdCol);
+        &--2{
+            background-image: linear-gradient(var.$thirdCol, var.$opCol);
+        }
+    }
+
+    &__title{
+        display: grid;
+        justify-content: center;
+        font-family: var.$mainFont;
+        font-size: var.$G;
+        padding-top: 30px;
+        padding-bottom: 30px;
+        font-weight: bold;
+
+        @media(max-width:640px){
+            text-align: center;
+            line-height: 8vw;
+        }
+    }
+    &__container{
+            display: flex;
+            justify-content: space-between;
+            padding: 3vw;
+            padding-bottom: 8vw;
+            text-wrap: wrap;
+            max-width: 70%;
+            margin: 0 auto;
+            gap: 8vw;
+            text-align: center;
+            &--left{
+                flex-direction: row-reverse;
+            }
+                @media(max-width:1024px){
+                    padding: 40px 0px;
+                    text-align: initial;
+                    max-width: 90%;
+
+                    img{
+                        width: 190px;
+                        height: 190px;
+                    }
+                }
+                @media(max-width: 640px){
+                    max-width: 90%;
+                    display: grid;
+                    text-align: center;
+
+                    img{
+                        width: 350px;
+                        height: 350px;
+                        display: block;
+                        margin: 0 auto;
+                    }
+                }
+
+            &__text{
+                padding: 2vw;
+                font-size: var.$P;
+                font-family: var.$secFont;
+                color: var.$textCol;
+
+                &__title{
+                    font-family: var.$mainFont;
+                    font-size: var.$M;
+                    @media (max-width: 1024px){
+                        text-align: center;
+                        padding-bottom: 8px;
+                    }
+                }
+            }
+    }
+}

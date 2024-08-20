@@ -1,0 +1,23 @@
+@use 'var';
+@use 'hero';
+@use 'contents';
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+footer{
+    padding: 5.6vw;
+    font-size: var.$G;
+    font-family: var.$thirdFont;
+    text-align: center;
+    background-color: var.$opCol;
+    font-size: var.$M;
+    color: #2c2c2cd2;
+
+    @media(max-width: 640px){
+        font-size: var.$P;
+    }
+}
